@@ -1,0 +1,31 @@
+.featured {
+    &__info {
+        position: absolute;
+        max-width: 255px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        color: $text-color;
+        bottom: 32px;
+        left: 32px;
+        right: 32px;
+
+        @media screen and (max-width: 768px) {
+            bottom: 24px;
+            left: 24px;
+            right: 24px;
+        }
+
+        & > p {
+            font-size: 14px;
+            line-height: 21px;
+        }
+
+        & > h3 {
+            font-family: Inter, sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 24px;
+        }
+    }
+}

@@ -1,0 +1,160 @@
+.header {
+    padding: 40px 0 16px;
+    border-bottom: 2px solid rgba(0, 0, 0, .3);
+
+    @media screen and (max-width: 768px) {
+        padding: 24px 0 16px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 48px;
+
+        @media screen and (max-width: 768px) {
+           gap: 24px;
+        }
+    }
+
+    &__logo {
+        font-family: Inter, sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 24px;
+    }
+
+    &__nav > ul {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 48px;
+        list-style: none;
+
+        @media screen and (max-width: 768px) {
+            gap: 24px;
+            font-size: 14px;
+        }
+    }
+
+    &__nav-link > a {
+        line-height: 24px;
+        font-weight: 500;
+        transition: ease color .4s;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    &__buttons > a {
+        display: flex;
+        align-items: center;
+
+        & path {
+            transition: ease stroke .4s;
+        }
+
+        &:hover path {
+            stroke: $primary-color;
+        }
+    }
+
+    &__menu {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 24px;
+
+        @media screen and (max-width: 768px) {
+            gap: 16px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        height: fit-content;
+        border-radius: 4px;
+        overflow: hidden;
+
+        & > button {
+            display: flex;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    &__dropdown {
+        min-width: 225px;
+        position: absolute;
+        top: 45px;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 16px;
+        border-radius: 4px;
+        background-image: linear-gradient(to right top, #2E478F, #484BBA, #aa80ff, #c867ff, #CD25CB);
+        pointer-events: none;
+        opacity: 0;
+        transition: ease opacity .4s;
+        z-index: 999;
+
+        @media screen and (max-width: 368px) {
+            top: 100px;
+            left: 0;
+        }
+
+        & > button, & > a {
+            background-color: transparent;
+            color: $text-color;
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        &.active {
+            pointer-events: all;
+            opacity: 1;
+        }
+    }
+
+    button  &__user{
+        width: 32px;
+        height: 32px;
+        background-color: $primary-color;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    &__cart {
+        position: relative;
+        display: flex;
+    }
+
+    &__cart-count {
+        position: absolute;
+        top: -3px;
+        right: -3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        min-width: 18px;
+        height: 18px;
+        padding: 0 5px;
+        background-color: $primary-color;
+        color: $text-color;
+        border-radius: 16px;
+        font-size: 12px;
+        line-height: 14px;
+    }
+}

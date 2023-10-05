@@ -1,0 +1,114 @@
+.admin {
+    &__crud {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        & > .users > h3, & > .categories > h3, & > .products > h3 {
+            font-family: Inter, sans-serif;
+            font-size: 40px;
+            font-weight: 500;
+            margin: 40px 0 60px 0;
+            text-decoration: 4px underline $primary-color;
+            text-underline-offset: 12px;
+        }
+    }
+
+    &__crud-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: calc(100% - 32px);
+        gap: 16px;
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+    }
+
+    &__crud-buttons a {
+        display: flex;
+    }
+
+    &__delete {
+        & > button {
+            display: flex;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+
+    &__update {
+        width: fit-content;
+
+        & > button {
+            display: flex;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+}
+
+.admin .users {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+
+    &__field {
+        line-height: 24px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        & > span {
+            font-weight: 500;
+        }
+    }
+
+    &__card {
+        position: relative;
+        padding-bottom: 60px;
+    }
+}
+
+.admin .categories {
+    &__delete path, &__update path {
+        transition: ease fill .4s;
+    }
+
+    &__admin-card:hover, &__admin-card:hover path, &__admin-card:hover link {
+        background-color: white;
+        color: black;
+        stroke: black;
+        border: 2px solid rgba(0, 0, 0, .3);
+    }
+
+    &__admin-card:hover line {
+        stroke: black;
+    }
+
+    &__admin-card {
+        position: relative;
+    }
+
+    &__card .admin__crud-buttons {
+        top: 16px;
+        bottom: auto;
+    }
+}
+
+.admin .products {
+    margin-top: 0;
+    margin-bottom: 60px;
+
+    &__admin-card .card__image {
+        height: fit-content;
+    }
+
+    &__admin-card .card__image img {
+        position: relative;
+    }
+}

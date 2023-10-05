@@ -1,0 +1,28 @@
+.swiper-slide.categories__card {
+    display: flex !important;
+    transition: ease all .4s !important;
+}
+
+.swiper .products__container, .swiper .categories__container {
+    gap: 0;
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+    display: none !important;
+    position: relative !important;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    width: 46px !important;
+    height: 46px !important;
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin-top: 0 !important;
+}
+
+.swiper-button-prev > svg, .swiper-button-next > svg {
+    width: auto !important;
+    height: auto !important;
+}

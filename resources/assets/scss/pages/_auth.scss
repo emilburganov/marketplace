@@ -1,0 +1,22 @@
+.auth {
+    padding: 60px 0 140px;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 420px;
+        align-items: center;
+        gap: 130px;
+
+        @media screen and (max-width: 1024px){
+            grid-template-columns: 1fr;
+        }
+
+        & > img {
+            width: 100%;
+
+            @media screen and (max-width: 1024px){
+                display: none;
+            }
+        }
+    }
+}

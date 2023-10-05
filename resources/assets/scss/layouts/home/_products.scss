@@ -1,0 +1,42 @@
+.products {
+    margin-top: 140px;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 70px;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+        gap: 60px 30px;
+        margin-bottom: 60px;
+    }
+
+    &__title-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 24px;
+        margin-bottom: 40px;
+
+        & > h2 {
+            font-family: Inter, sans-serif;
+            font-size: 36px;
+            font-weight: 600;
+            line-height: 40px;
+        }
+    }
+
+    &__controls {
+        display: flex;
+        gap: 8px;
+    }
+
+    & > .button {
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,21 @@
+.product {
+    width: 100%;
+    margin-bottom: 70px;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+
+        @media screen and (max-width: 1024px) {
+            margin-top: 0;
+        }
+    }
+
+    & .card__image > img {
+        width: 100%;
+    }
+
+    & .card__name {
+        white-space: initial;
+    }
+}

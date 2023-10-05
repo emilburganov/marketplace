@@ -1,0 +1,63 @@
+.footer {
+    background-color: black;
+    color: $text-color;
+    padding-top: 80px;
+    margin-top: auto;
+
+    @media screen and (max-width: 1200px) {
+        padding: 40px 24px 0 24px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    &__columns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 87px;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        & > h3 {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 28px;
+        }
+    }
+
+    &__column-info {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        & > p {
+            line-height: 24px;
+        }
+    }
+
+    &__social-media {
+        display: flex;
+        gap: 24px;
+
+        & > a {
+            display: flex;
+        }
+    }
+
+    &__copyright {
+        display: flex;
+        gap: 6px;
+        font-size: 16px;
+        line-height: 24px;
+        opacity: .6;
+        padding: 16px 0 24px;
+        margin: 0 auto;
+    }
+}

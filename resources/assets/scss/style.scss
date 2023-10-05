@@ -1,0 +1,33 @@
+/* Base */
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/global';
+
+/* Sass-utils */
+@import 'sass-utils/variables';
+
+/* Layouts */
+@import 'layouts/notification';
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'layouts/home/navigation';
+@import 'layouts/home/banner';
+@import 'layouts/home/products';
+@import 'layouts/home/featured';
+@import 'layouts/home/services';
+
+/* Components */
+@import 'components/buttons';
+@import 'components/inputs';
+@import 'components/cards';
+@import 'components/forms';
+@import 'components/swiper';
+
+/* Pages */
+@import 'pages/home';
+@import 'pages/auth';
+@import 'pages/admin';
+@import 'pages/catalog';
+@import 'pages/seller';
+@import 'pages/product';
+@import 'pages/cart';
